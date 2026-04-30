@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Theme Settings";
+}
+
+<div class="container-fluid">
+
+   
+
+    <div class="card p-4">
+
+        <div class="mb-3">
+            <label>Primary Color</label>
+            <input type="color" id="primaryColor" class="form-control form-control-color" />
+        </div>
+
+        <div class="mb-3">
+            <label>Accent Color</label>
+            <input type="color" id="accentColor" class="form-control form-control-color" />
+        </div>
+
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="darkMode">
+            <label class="form-check-label">Dark Mode</label>
+        </div>
+
+        <button class="btn btn-primary" onclick="applyTheme()">Apply</button>
+
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        function applyTheme() {
+            const primary = document.getElementById("primaryColor").value;
+            const accent = document.getElementById("accentColor").value;
+            const dark = document.getElementById("darkMode").checked;
+
+            document.documentElement.style.setProperty('--hms-primary', primary);
+            document.documentElement.style.setProperty('--hms-accent', accent);
+
+            if (dark) {
+                document.documentElement.setAttribute("data-theme", "dark");
+            } else {
+                document.documentElement.removeAttribute("data-theme");
+            }
+
+            localStorage.setItem("primary", primary);
+            localStorage.setItem("accent", accent);
+            localStorage.setItem("dark", dark);
+        }
+
+        window.onload = function () {
+            const primary = localStorage.getItem("primary");
+            const accent = localStorage.getItem("accent");
+            const dark = localStorage.getItem("dark");
+
+            if (primary) {
+                document.documentElement.style.setProperty('--hms-primary', primary);
+                document.getElementById("primaryColor").value = primary;
+            }
+
+            if (accent) {
+                document.documentElement.style.setProperty('--hms-accent', accent);
+                document.getElementById("accentColor").value = accent;
+            }
+
+            if (dark === "true") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                document.getElementById("darkMode").checked = true;
+            }
+        }
+    </script>
+}

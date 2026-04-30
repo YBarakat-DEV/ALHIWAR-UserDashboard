@@ -1,0 +1,180 @@
+﻿@{
+    ViewData["Title"] = "HMS Dashboard";
+}
+
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <div class="small-box text-bg-primary">
+            <div class="inner">
+                <h3>128K</h3>
+                <p>Total Voters</p>
+            </div>
+            <i class="small-box-icon bi bi-people"></i>
+            <a href="#" class="small-box-footer">Voter Database <i class="bi bi-link-45deg"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box text-bg-success">
+            <div class="inner">
+                <h3>842</h3>
+                <p>Delegates Active</p>
+            </div>
+            <i class="small-box-icon bi bi-person-badge"></i>
+            <a href="#" class="small-box-footer">Field Teams <i class="bi bi-link-45deg"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box text-bg-warning">
+            <div class="inner">
+                <h3>62%</h3>
+                <p>Voting Probability</p>
+            </div>
+            <i class="small-box-icon bi bi-graph-up-arrow"></i>
+            <a href="#" class="small-box-footer">AI Prediction <i class="bi bi-link-45deg"></i></a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box text-bg-danger">
+            <div class="inner">
+                <h3>7</h3>
+                <p>Risk Zones</p>
+            </div>
+            <i class="small-box-icon bi bi-exclamation-triangle"></i>
+            <a href="#" class="small-box-footer">Risk Detection <i class="bi bi-link-45deg"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Election Operations Overview</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <h4>34</h4>
+                        <p class="text-muted">Active Campaigns</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>12,480</h4>
+                        <p class="text-muted">Calls Tracked</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>91%</h4>
+                        <p class="text-muted">Data Quality</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>18</h4>
+                        <p class="text-muted">Open Tasks</p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="text-center text-muted py-5">
+                    Regional / Voter Movement Chart Placeholder
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-success card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Live Activity</h3>
+            </div>
+
+            <div class="card-body p-0">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Module</th>
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Call Center</td>
+                            <td>Follow-up calls completed in Beirut district</td>
+                            <td><span class="badge text-bg-success">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delegates</td>
+                            <td>New delegate assigned to polling area</td>
+                            <td><span class="badge text-bg-info">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Voter Movement</td>
+                            <td>Shift detected in undecided segment</td>
+                            <td><span class="badge text-bg-warning">Review</span></td>
+                        </tr>
+                        <tr>
+                            <td>Election Day</td>
+                            <td>Incident escalation workflow tested</td>
+                            <td><span class="badge text-bg-danger">Alert</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="card card-danger card-outline">
+            <div class="card-header">
+                <h3 class="card-title">AI Intelligence</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="alert alert-danger">
+                    <strong>Early Risk Detection</strong><br />
+                    Beirut 3 shows declining engagement.
+                </div>
+
+                <div class="alert alert-warning">
+                    <strong>AI Recommendation</strong><br />
+                    Increase calls in Ras El Nabaa and Mazraa.
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>Scenario Modeling</strong><br />
+                    Additional delegate coverage may increase turnout.
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-warning card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Election Preparation</h3>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">Strategic voter segmentation</li>
+                    <li class="list-group-item">Team & delegate assignment</li>
+                    <li class="list-group-item">Campaign monitoring</li>
+                    <li class="list-group-item">Logistics planning</li>
+                    <li class="list-group-item">Regional readiness indicators</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card card-info card-outline">
+            <div class="card-header">
+                <h3 class="card-title">Election Day Command</h3>
+            </div>
+
+            <div class="card-body">
+                <p><i class="bi bi-broadcast"></i> Live dashboards</p>
+                <p><i class="bi bi-geo-alt"></i> Turnout & incident tracking</p>
+                <p><i class="bi bi-bell"></i> Instant alerts</p>
+                <p><i class="bi bi-cpu"></i> AI-assisted decisions</p>
+            </div>
+        </div>
+    </div>
+</div>

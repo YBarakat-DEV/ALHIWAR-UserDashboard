@@ -1,0 +1,295 @@
+﻿:root {
+    --hms-primary: #09466e;
+    --hms-primary-dark: #073552;
+    --hms-accent: #fa1911;
+    --hms-bg: #f5f7fb;
+    --hms-surface: #ffffff;
+    --hms-dark: #0f172a;
+    --hms-right-sidebar: #111827;
+    --hms-text: #1f2937;
+    --hms-text-light: #64748b;
+    --hms-text-white: #ffffff;
+    --hms-success: #16a34a;
+    --hms-warning: #f59e0b;
+    --hms-danger: #ef4444;
+    --hms-info: #3b82f6;
+    --hms-border: #e5e7eb;
+    --hms-radius: 12px;
+    --hms-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    --hms-padding: 16px;
+}
+
+body {
+    background: var(--hms-bg) !important;
+    color: var(--hms-text) !important;
+}
+
+.app-main,
+.app-content {
+    background: var(--hms-bg) !important;
+}
+
+.app-header {
+    background: var(--hms-primary) !important;
+    color: var(--hms-text-white) !important;
+}
+
+.app-sidebar {
+    background: var(--hms-dark) !important;
+}
+
+.sidebar-menu .nav-link {
+    color: var(--hms-text-white) !important;
+}
+
+    .sidebar-menu .nav-link.active {
+        background: var(--hms-accent) !important;
+        color: white !important;
+    }
+
+.card {
+    background: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+    border-radius: var(--hms-radius) !important;
+    box-shadow: var(--hms-shadow) !important;
+    border: none !important;
+}
+
+.card-header {
+    background: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+.small-box {
+    border-radius: var(--hms-radius) !important;
+    box-shadow: var(--hms-shadow) !important;
+}
+
+    .small-box.text-bg-primary {
+        background: var(--hms-primary) !important;
+    }
+
+    .small-box.text-bg-danger {
+        background: var(--hms-accent) !important;
+    }
+
+.btn-primary {
+    background: var(--hms-primary) !important;
+    border-color: var(--hms-primary) !important;
+}
+
+.btn-danger {
+    background: var(--hms-accent) !important;
+    border-color: var(--hms-accent) !important;
+}
+
+.alert-danger {
+    background: var(--hms-accent) !important;
+    border-color: var(--hms-accent) !important;
+    color: white !important;
+}
+
+.alert-warning {
+    background: var(--hms-warning) !important;
+    border-color: var(--hms-warning) !important;
+    color: white !important;
+}
+
+.alert-info {
+    background: var(--hms-info) !important;
+    border-color: var(--hms-info) !important;
+    color: white !important;
+}
+
+.alert-success {
+    background: var(--hms-success) !important;
+    border-color: var(--hms-success) !important;
+    color: white !important;
+}
+
+.table {
+    background: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+    .table th,
+    .table td {
+        color: var(--hms-text) !important;
+    }
+
+.right-ai-sidebar {
+    background: var(--hms-right-sidebar) !important;
+    color: white !important;
+}
+
+
+[data-theme="dark"] {
+    --hms-bg: #0f172a;
+    --hms-surface: #1e293b;
+    --hms-dark: #020617;
+    --hms-right-sidebar: #020617;
+    --hms-text: #e2e8f0;
+    --hms-text-light: #94a3b8;
+    --hms-border: #334155;
+    --hms-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.app-main,
+.app-content,
+.content-wrapper {
+    background: var(--hms-bg) !important;
+    color: var(--hms-text) !important;
+}
+
+.text-bg-primary {
+    background-color: var(--hms-primary) !important;
+    color: white !important;
+}
+
+.text-bg-danger {
+    background-color: var(--hms-accent) !important;
+    color: white !important;
+}
+
+.bg-primary {
+    background-color: var(--hms-primary) !important;
+}
+
+.bg-danger {
+    background-color: var(--hms-accent) !important;
+}
+
+.card,
+.card-body,
+.card-header,
+.list-group-item {
+    background-color: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+.table,
+.table thead,
+.table tbody,
+.table tr,
+.table th,
+.table td {
+    background-color: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+.small-box {
+    color: white !important;
+}
+
+.small-box.text-bg-primary {
+    background-color: var(--hms-primary) !important;
+}
+
+.small-box.text-bg-danger {
+    background-color: var(--hms-accent) !important;
+}
+
+.small-box.text-bg-success {
+    background-color: var(--hms-success) !important;
+}
+
+.small-box.text-bg-warning {
+    background-color: var(--hms-warning) !important;
+    color: #111827 !important;
+}
+
+[data-theme="dark"] {
+    --hms-bg: #0f172a;
+    --hms-surface: #1e293b;
+    --hms-text: #e2e8f0;
+    --hms-success: #22c55e;
+    --hms-warning: #facc15;
+    --hms-info: #38bdf8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.app-main,
+.app-content,
+.content-wrapper {
+    background: var(--hms-bg) !important;
+    color: var(--hms-text) !important;
+}
+
+.text-bg-primary {
+    background-color: var(--hms-primary) !important;
+    color: white !important;
+}
+
+.text-bg-danger {
+    background-color: var(--hms-accent) !important;
+    color: white !important;
+}
+
+.bg-primary {
+    background-color: var(--hms-primary) !important;
+}
+
+.bg-danger {
+    background-color: var(--hms-accent) !important;
+}
+
+.card,
+.card-body,
+.card-header,
+.list-group-item {
+    background-color: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+.table,
+.table thead,
+.table tbody,
+.table tr,
+.table th,
+.table td {
+    background-color: var(--hms-surface) !important;
+    color: var(--hms-text) !important;
+}
+
+.small-box {
+    color: white !important;
+}
+
+    .small-box.text-bg-primary {
+        background-color: var(--hms-primary) !important;
+    }
+
+    .small-box.text-bg-danger {
+        background-color: var(--hms-accent) !important;
+    }
+
+    .small-box.text-bg-success {
+        background-color: var(--hms-success) !important;
+    }
+
+    .small-box.text-bg-warning {
+        background-color: var(--hms-warning) !important;
+        color: #111827 !important;
+    }
+
+[data-theme="dark"] {
+    --hms-bg: #0f172a;
+    --hms-surface: #1e293b;
+    --hms-text: #e2e8f0;
+    --hms-success: #22c55e;
+    --hms-warning: #facc15;
+    --hms-info: #38bdf8;
+}
