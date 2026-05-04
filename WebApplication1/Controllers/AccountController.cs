@@ -12,7 +12,7 @@ public class AccountController : Controller
         if (username == "admin" && password == "123")
         {
             HttpContext.Session.SetString("User", username);
-            return RedirectToAction("Dashboard", "Home");
+            return RedirectToAction("Dashboard", "Home"); 
         }
         ViewBag.Error = "YOU HAVE WRONG PASSWORD";
         return View();
