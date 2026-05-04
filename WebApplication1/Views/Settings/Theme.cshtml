@@ -3,9 +3,6 @@
 }
 
 <div class="container-fluid">
-
-   
-
     <div class="card p-4">
 
         <div class="mb-3">
@@ -23,52 +20,50 @@
             <label class="form-check-label">Dark Mode</label>
         </div>
 
-        <button class="btn btn-primary" onclick="applyTheme()">Apply</button>
+        <button onclick="showAlert()" class="btn btn-primary">Click</button>
 
     </div>
 
 </div>
 
+@{
+    ViewData["Title"] = "Theme Settings";
+}
+
+<div class="container-fluid">
+    <!-- MY INPUT
+    -->
+</div>
+
 @section Scripts {
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("primaryColor").value =
+                localStorage.getItem("hms-primary") || "#09466e";
+
+            document.getElementById("accentColor").value =
+                localStorage.getItem("hms-accent") || "#fa1911";
+
+            document.getElementById("darkMode").checked =
+                localStorage.getItem("hms-dark") === "true";
+        });
+
         function applyTheme() {
             const primary = document.getElementById("primaryColor").value;
             const accent = document.getElementById("accentColor").value;
             const dark = document.getElementById("darkMode").checked;
 
-            document.documentElement.style.setProperty('--hms-primary', primary);
-            document.documentElement.style.setProperty('--hms-accent', accent);
-
-            if (dark) {
-                document.documentElement.setAttribute("data-theme", "dark");
-            } else {
-                document.documentElement.removeAttribute("data-theme");
-            }
-
-            localStorage.setItem("primary", primary);
-            localStorage.setItem("accent", accent);
-            localStorage.setItem("dark", dark);
-        }
-
-        window.onload = function () {
-            const primary = localStorage.getItem("primary");
-            const accent = localStorage.getItem("accent");
-            const dark = localStorage.getItem("dark");
-
-            if (primary) {
-                document.documentElement.style.setProperty('--hms-primary', primary);
-                document.getElementById("primaryColor").value = primary;
-            }
-
-            if (accent) {
-                document.documentElement.style.setProperty('--hms-accent', accent);
-                document.getElementById("accentColor").value = accent;
-            }
-
-            if (dark === "true") {
-                document.documentElement.setAttribute("data-theme", "dark");
-                document.getElementById("darkMode").checked = true;
-            }
+            saveHmsTheme(primary, accent, dark);
+            alert("Theme applied successfully");
         }
     </script>
 }
+ <script>
+      function showAlert() {
+          Swal.fire({
+              title: "you change the theme!",
+            text: "Theme applied successfully",
+              icon: "success"
+          });
+      }
+</script>

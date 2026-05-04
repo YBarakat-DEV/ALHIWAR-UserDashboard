@@ -6,7 +6,6 @@ public class AccountController : Controller
     {
         return View();
     }
-
     [HttpPost]
     public IActionResult Login(string username, string password)
     {
@@ -15,12 +14,9 @@ public class AccountController : Controller
             HttpContext.Session.SetString("User", username);
             return RedirectToAction("Dashboard", "Home");
         }
-
-        ViewBag.Error = "Wrong username or password";
+        ViewBag.Error = "YOU HAVE WRONG PASSWORD";
         return View();
-    }
-
-    public IActionResult Logout()
+    }   public IActionResult Logout()
     {
         HttpContext.Session.Clear();
         return RedirectToAction("Login");

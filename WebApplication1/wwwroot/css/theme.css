@@ -1,5 +1,74 @@
 ﻿:root {
     --hms-primary: #09466e;
+    --hms-accent: #fa1911;
+    --hms-bg: #f5f7fb;
+    --hms-surface: #ffffff;
+    --hms-sidebar: #0f172a;
+    --hms-text: #1f2937;
+}
+
+body,
+.app-main,
+.app-content,
+.app-content-header {
+    background: var(--hms-bg) !important;
+    color: var(--hms-text) !important;
+}
+.app-header {
+    background: var(--hms-primary) !important;
+}
+.app-sidebar {
+    background: var(--hms-sidebar) !important;
+}
+.sidebar-menu .nav-link.active {
+    background: var(--hms-accent) !important;
+}
+
+.small-box.text-bg-primary {
+    background: var(--hms-primary) !important;
+}
+
+.small-box.text-bg-danger {
+    background: var(--hms-accent) !important;
+}
+
+
+.btn-primary {
+    background: var(--hms-primary) !important;
+    border-color: var(--hms-primary) !important;
+}
+
+.btn-danger {
+    background: var(--hms-accent) !important;
+    border-color: var(--hms-accent) !important;
+}
+
+
+
+
+html[data-theme="dark"] {
+    --hms-bg: #0f172a;
+    --hms-surface: #1e293b;
+    --hms-sidebar: #020617;
+    --hms-text: #e2e8f0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*:root {
+    --hms-primary: #09466e;
     --hms-primary-dark: #073552;
     --hms-accent: #fa1911;
     --hms-bg: #f5f7fb;
@@ -292,4 +361,4 @@ body {
     --hms-success: #22c55e;
     --hms-warning: #facc15;
     --hms-info: #38bdf8;
-}
+}*/
