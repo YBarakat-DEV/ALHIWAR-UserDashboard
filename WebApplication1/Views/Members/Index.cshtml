@@ -1,0 +1,44 @@
+﻿@model List<WebApplication1.Models.Member>
+
+@{
+    ViewData["Title"] = "Members";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Members List</h3>
+    </div>
+    <a href="/Members/Seed" class="btn btn-success mb-3">
+        Add Sample Member
+    </a>
+    <div class="card-body">
+        <a href="#" class="btn btn-primary mb-3">Add Member</a>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Full Name</th>
+                    <th>Phone</th>
+                    <th>Town</th>
+                    <th>Status</th>
+                    <th>Volunteer</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Code</td>
+                        <td>@item.FirstName @item.FatherName @item.LastName</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>@item.Town</td>
+                        <td>@item.MembershipStatus</td>
+                        <td>@(item.IsVolunteer ? "Yes" : "No")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
