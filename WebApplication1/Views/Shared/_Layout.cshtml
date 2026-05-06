@@ -56,7 +56,7 @@
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
     <div class="app-wrapper">
-
+    
         <nav class="app-header navbar navbar-expand bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button">
@@ -66,11 +66,13 @@
                     <strong>HMS</strong>
                 </a>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a href="/Account/Logout" class="nav-link">
-                            <i class="bi bi-box-arrow-right"></i> Logout
-                        </a>
-                    </li>
+                   <li class="nav-item">
+    <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline-link text-white bg-transparent border-0">
+                        <button>   <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+    </form>
+</li>
+
                 </ul>
             </div>
         </nav>

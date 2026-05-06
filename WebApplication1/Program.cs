@@ -26,10 +26,11 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseStaticFiles();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseSession();
 app.MapStaticAssets();
-
+builder.Services.AddSession();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}")

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 
 public class AccountController : Controller
 {
@@ -16,9 +17,16 @@ public class AccountController : Controller
         }
         ViewBag.Error = "YOU HAVE WRONG PASSWORD";
         return View();
-    }   public IActionResult Logout()
-    {
-        HttpContext.Session.Clear();
-        return RedirectToAction("Login");
     }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();   // ✅ remove session
+       
+
+        return RedirectToAction("Login", "Account");
+    }
+
 }
